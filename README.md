@@ -20,36 +20,70 @@ and document the quality assurance and problem-solving process using GitHub.
 - Arduino C/C++
 - GitHub
 
-## 4. Working Principle
+## 4. Hardware Connection
 
-The Arduino configures the LED pin as an output. The LED is switched ON
-for one second and OFF for one second repeatedly.
+The LED is connected to Arduino digital pin 13 through a 220Ω resistor.
 
-## 5. Expected Behaviour
+The LED cathode is connected to GND.
 
-The LED should:
+## 5. Working Principle
 
-1. Turn ON.
-2. Remain ON for approximately 1 second.
-3. Turn OFF.
-4. Remain OFF for approximately 1 second.
-5. Repeat continuously.
+The Arduino configures the LED pin as an output.
 
-## 6. QA Process
+The LED is switched ON for one second and then OFF for one second.
+This process repeats continuously.
 
-GitHub Issues were used to document identified problems, their severity,
-root causes and proposed solutions.
+## 6. Expected Behaviour
 
-The issues were discussed through GitHub comments and resolved through
-code modifications and commits.
+1. LED turns ON.
+2. LED remains ON for approximately 1 second.
+3. LED turns OFF.
+4. LED remains OFF for approximately 1 second.
+5. The cycle repeats continuously.
 
-## 7. Project Tracking
+## 7. Testing Procedure
 
-GitHub was used for:
+1. Connect the LED and resistor to the Arduino.
+2. Open the `src/led_blink.ino` file in Arduino IDE.
+3. Select the appropriate Arduino board and COM port.
+4. Upload the program.
+5. Observe the LED.
+6. Verify that the LED turns ON and OFF at approximately 1-second intervals.
 
-- Source-code management
-- Issue tracking
-- QA documentation
-- Comments and collaboration
-- Commit history
-- Problem resolution
+## 8. QA Process
+
+GitHub Issues were used to document problems identified during
+development and testing.
+
+Each issue included:
+
+- Problem description
+- Expected behaviour
+- Observed behaviour
+- Severity
+- Root cause
+- Proposed solution
+- Verification procedure
+
+## 9. GitHub Workflow
+
+The project used:
+
+- GitHub Issues for problem tracking
+- Branches for implementing fixes
+- Commits for recording changes
+- Pull Requests for reviewing and merging changes
+- Issue references for traceability
+
+## 10. QA Issues
+
+- Issue #1 – LED blinking interval
+- Issue #2 – GPIO initialization
+- Issue #3 – LED pin configuration
+- Issue #4 – Project documentation
+
+## 11. Learning Outcome
+
+This project demonstrated how GitHub can be used to improve
+documentation, traceability, issue tracking and collaborative
+problem solving in an embedded-system project.
